@@ -12,7 +12,7 @@ sht.mode = adafruit_sht4x.Mode.NOHEAT_HIGHPRECISION
 # sht.mode = adafruit_sht4x.Mode.LOWHEAT_100MS
 print("Current mode is: ", adafruit_sht4x.Mode.string[sht.mode])
 
-@app.route('/')
+@app.route('/metrics')
 def sht40_metrics():
     temperature, humidity = sht.measurements
     return "temperature {}\nhumidity {}".format(temperature, humidity)
