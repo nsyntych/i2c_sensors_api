@@ -13,11 +13,6 @@ sht.mode = adafruit_sht4x.Mode.NOHEAT_HIGHPRECISION
 print("Current mode is: ", adafruit_sht4x.Mode.string[sht.mode])
 
 @app.route('/')
-def hello_world():
-    temperature, relative_humidity = sht.measurements
-    print("Temperature: %0.1f C" % temperature)
-    print("Humidity: %0.1f %%" % relative_humidity)
-    return {
-        "temperature": temperature,
-        "relative_humidity": relative_humidity
-    }
+def sht40_metrics():
+    temperature, humidity = sht.measurements
+    return "temperature {}\nhumidity {}".format(temperature, humidity)
