@@ -17,3 +17,7 @@ print("Current mode is: ", adafruit_sht4x.Mode.string[sht.mode])
 def sht40_metrics():
     temperature, humidity = sht.measurements
     return "sht40_temperature {}\nsht40_humidity {}".format(temperature, humidity)
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')

@@ -5,6 +5,7 @@
 *.pyo
 env/
 venv/
+sht40env/
 .venv/
 env*
 dist/
