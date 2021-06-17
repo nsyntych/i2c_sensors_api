@@ -7,7 +7,7 @@ User=www-data
 Group=www-data
 WorkingDirectory=/root/i2c_sensors_api
 Environment="PATH=/root/i2c_sensors_api/sht40env/bin"
-ExecStart=/root/i2c_sensors_api/sht40env/bin/uwsgi --ini myproject.ini
+ExecStart=/root/i2c_sensors_api/sht40env/bin/uwsgi --ini sht40.ini
 
 [Install]
 WantedBy=multi-user.target
